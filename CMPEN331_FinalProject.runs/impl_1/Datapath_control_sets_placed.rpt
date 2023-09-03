@@ -1,0 +1,117 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu May  4 15:51:21 2023
+| Host         : DESKTOP-E28466P running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Datapath_control_sets_placed.rpt
+| Design       : Datapath
+| Device       : xc7z012s
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    27 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    39 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    34 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              77 |           56 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             992 |          382 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+-----------------------------+---------------------------------------+------------------+----------------+--------------+
+|          Clock Signal          |        Enable Signal        |            Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+-----------------------------+---------------------------------------+------------------+----------------+--------------+
+|  programcounter/PC_reg[2]_2    |                             |                                       |                1 |              1 |         1.00 |
+|  programcounter/PC_reg[6]_1[1] |                             |                                       |                1 |              1 |         1.00 |
+|  programcounter/PC_reg[4]_0    |                             |                                       |                2 |              2 |         1.00 |
+|  programcounter/E[0]           |                             |                                       |                4 |              4 |         1.00 |
+|  programcounter/PC_reg[6]_1[0] |                             |                                       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                 |                             |                                       |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                 | controlunit/wmem[0]         |                                       |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_22 | programcounter/register[1][31]_i_4_27 |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_23 | programcounter/register[1][31]_i_4_25 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_27 | programcounter/register[1][31]_i_4_17 |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_24 | programcounter/register[1][31]_i_4_23 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_17 | programcounter/register[1][31]_i_4_14 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_10 | programcounter/register[1][31]_i_4_7  |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_16 | programcounter/register[1][31]_i_4_13 |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_18 | programcounter/register[1][31]_i_4_15 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_20 | programcounter/register[1][31]_i_4_29 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_25 | programcounter/register[1][31]_i_4_21 |                6 |             32 |         5.33 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_26 | programcounter/register[1][31]_i_4_19 |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_13 | programcounter/register[1][31]_i_4_10 |                5 |             32 |         6.40 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_14 | programcounter/register[1][31]_i_4_11 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_15 | programcounter/register[1][31]_i_4_12 |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_19 | programcounter/register[1][31]_i_4_16 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_12 | programcounter/register[1][31]_i_4_9  |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_21 | programcounter/register[1][31]_i_4_28 |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_11 | programcounter/register[1][31]_i_4_8  |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_8  | programcounter/register[1][31]_i_4_5  |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_33 | programcounter/register[1][31]_i_4_30 |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_32 | programcounter/register[1][31]_i_4_26 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_7  | programcounter/register[1][31]_i_4_4  |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_30 | programcounter/register[1][31]_i_4_22 |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_29 | programcounter/register[1][31]_i_4_20 |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_28 | programcounter/register[1][31]_i_4_18 |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_31 | programcounter/register[1][31]_i_4_24 |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_3  | programcounter/register[1][31]_i_4_0  |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_4  | programcounter/register[1][31]_i_4_1  |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_5  | programcounter/register[1][31]_i_4_2  |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_6  | programcounter/register[1][31]_i_4_3  |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                 | programcounter/PC_reg[6]_9  | programcounter/register[1][31]_i_4_6  |                9 |             32 |         3.56 |
+|  n_0_998_BUFG                  |                             |                                       |               29 |             32 |         1.10 |
++--------------------------------+-----------------------------+---------------------------------------+------------------+----------------+--------------+
+
+

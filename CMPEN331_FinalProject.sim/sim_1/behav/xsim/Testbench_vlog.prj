@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Control_Unit.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Datapath.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/ImmExt.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/InstMem.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Mux.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Mux2.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Program_Counter.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/RegMux.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/Regfile.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/adder.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/adder4Mux.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/aluc.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/dataMemMux.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/datamem.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/f.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/leftshift.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/lsAdderShift.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/qbmux.v" \
+"../../../../LAB4_CMPEN331.srcs/sources_1/new/regDataMux.v" \
+"../../../../LAB4_CMPEN331.srcs/sim_1/new/Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
